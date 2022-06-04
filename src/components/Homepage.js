@@ -1,9 +1,9 @@
-import Navbar from "./Navbar";
+import Header from "./Header";
 
 const Homepage = () => {
     return ( 
         <>
-         <Navbar />
+         <Header />
 
             <h1 className="text-center text-3xl mt-10 mb-10">WE ARE COMING SOON</h1>
             <p className="text-center">We are working hard to give you the best experience</p>
