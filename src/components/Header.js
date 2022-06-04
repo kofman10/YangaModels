@@ -17,12 +17,12 @@ const Header = () => {
   <nav className="flex justify-between ">
              <div>YangaModelManagement</div>
              <div>
-              <MenuIcon onClick={showMenu} className = "h-6 w-6 cursor-pointer md:hidden"/>
+              <MenuIcon onClick={showMenu} className = " h-6 w-6 cursor-pointer md:hidden"/>
                           
                     <div className=" hidden md:flex " ><Link to='/' className="underline">Menu</Link></div>
                   
                 </div>
-                < Menu showMenu={showMenu} active = {active}/>
+                < Menu showMenu={showMenu} active = {active} />
                 </nav>
           </header>
           
