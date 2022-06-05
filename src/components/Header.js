@@ -15,9 +15,9 @@ const Header = () => {
     return (
           <header> 
   <nav className="flex justify-between ">
-             <div className="flex">YangaModelManagement <img className="h-6 w-6" src={yangabg} alt="" /></div>
+             <div className="flex mt-2 ml-4">YangaModelManagement <img className="h-6 w-6" src={yangabg} alt="" /></div>
              <div>
-              <MenuIcon onClick={showMenu} className = " h-6 w-6 cursor-pointer md:hidden"/>
+              <MenuIcon onClick={showMenu} className = " h-6 w-6 cursor-pointer md:hidden mt-2 mr-4"/>
                           
                     <div className=" hidden md:flex " ><Link to='/' className="underline">Menu</Link></div>
                   
