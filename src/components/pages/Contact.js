@@ -1,8 +1,10 @@
-import Menu from "../Menu";
+import Header from "../Header";
+
+
 const Contact = () => {
     return (
         <div className="bg-[#F8DBCB]">
-        <Menu />
+        <Header />
          </div>
       );
 }
