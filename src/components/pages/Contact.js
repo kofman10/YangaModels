@@ -3,11 +3,11 @@ import Header from "../Header";
 
 const Contact = () => {
     return (
-        <div className="bg-[rgb(248,219,203)] h-screen w-full">
+        <div className="bg-[rgb(248,219,203)] w-full">
         <Header />
          <h1 className="uppercase "> Contact </h1>
          <hr className="border-1 border-black"/>
-         <section className="flex flex-col gap-10 justify-center my-20 items-center">
+         <section className="flex flex-col gap-10 justify-center h-screen items-center ">
              <div>
                  <div className="text-center">Mail</div>
                  <div className="text-center"> info@yangamodels.com</div>
