@@ -7,7 +7,7 @@ const Contact = () => {
         <Header />
          <h1 className="uppercase "> Contact </h1>
          <hr className="border-1 border-black"/>
-         <section className="flex flex-col gap-10 justify-center h-full items-center">
+         <section className="flex flex-col gap-10 justify-center my-20 items-center">
              <div>
                  <div className="text-center">Mail</div>
                  <div className="text-center"> info@yangamodels.com</div>
