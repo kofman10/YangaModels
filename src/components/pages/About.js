@@ -2,7 +2,7 @@ import Header from "../Header";
 
 const About = () => {
     return ( 
-        <div className="bg-[#F8DBCB] h-full w-full absolute"> 
+        <div className="bg-[#F8DBCB] h-screen w-full "> 
         <Header />
         <h1 className="mt-10 text-4xl text-center"> ABOUT US</h1>
         <hr className="border-1 border-black mt-4"/>
