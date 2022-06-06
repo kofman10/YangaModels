@@ -2,7 +2,7 @@ import Header from "./Header";
 
 const Homepage = () => {
     return ( 
-        <div className="bg-[#F8DBCB] h-screen w-screen">
+        <div className="bg-[#F8DBCB] h-full w-full absolute">
   <Header />
  
 <h1 className="text-center text-3xl mt-10 mb-10">WE ARE COMING SOON</h1>
