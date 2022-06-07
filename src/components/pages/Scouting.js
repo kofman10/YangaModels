@@ -1,4 +1,5 @@
 import Header from "../Header";
+import './Scouting.css';
 
 const Scouting = () => {
     return (
@@ -14,7 +15,7 @@ if we believe that you have the right characteristics to become a Yanga Model.  
              <div className="flex flex-col justify-center gap-3 mx-5"> 
              <input name="firstname" placeholder="FIRSTNAME" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2"/>
              <input name="firstname" placeholder="LASTNAME" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2"/>
-             <input name="date of birth" type = 'date' className="placeholder-black bg-inherit border border-black focus:outline-none p-2"/>
+             <input name="date of birth" placeholder="Date of Birth" type = 'date' className="placeholder-black bg-inherit border border-black focus:outline-none p-2"/>
              <input name="email" placeholder="EMAIL" type="email" className="placeholder-black bg-inherit border border-black focus:outline-none p-2"/>
              <input name="Mobile Number" placeholder="MOBILE NUMBER" type="number" className="placeholder-black bg-inherit border border-black focus:outline-none p-2"/>
              <input name="address" placeholder="ADDRESS" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2"/>
@@ -30,9 +31,8 @@ if we believe that you have the right characteristics to become a Yanga Model.  
                <span>MALE</span>
                <input className="ml-1 h-4 w-4" type="radio" name="sex" id="male-radio" />
            </div>
-             <span className="mt-10">MEASUREMENTI</span>
+             <span className="mt-10">MEASUREMENT</span>
              <div className="">
-
              </div>
          </form>
         </div>
