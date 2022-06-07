@@ -23,14 +23,14 @@ if we believe that you have the right characteristics to become a Yanga Model.  
              <input name="firstname" placeholder="TALENT/HOBBIES" type="text" className="bg-inherit border border-black focus:outline-none p-2"/>
 
                   </div>
-           <div className="flex items-center ml-5"> 
-               <span className="mr-5">SEX</span>
+           <div className="flex items-center ml-5 mt-5"> 
+               <span className="mr-5">SEX :</span>
                <span >FEMALE</span>
-               <input className="mr-2 ml-1" type="radio" name="sex" id="female-radio" />
+               <input className="mr-2 ml-1 h-4 w-4" type="radio" name="sex" id="female-radio" />
                <span>MALE</span>
-               <input className="ml-1" type="radio" name="sex" id="male-radio" />
+               <input className="ml-1 h-4 w-4" type="radio" name="sex" id="male-radio" />
            </div>
-             
+             <span className="mt-10">MEASUREMENT</span>
          </form>
         </div>
       );
