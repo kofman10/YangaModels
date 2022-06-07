@@ -1,5 +1,4 @@
 import Header from "../Header";
-import './Scouting.css';
 
 const Scouting = () => {
     return (
