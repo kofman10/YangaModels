@@ -12,15 +12,15 @@ if we believe that you have the right characteristics to become a Yanga Model.  
 <span>INFO</span>
          <form action="" >
              <div className="flex flex-col justify-center gap-3 mx-5"> 
-             <input name="firstname" placeholder="FIRSTNAME" type="text" className="bg-inherit border border-black focus:outline-none p-2"/>
-             <input name="firstname" placeholder="LASTNAME" type="text" className="bg-inherit border border-black focus:outline-none p-2"/>
-             <input name="firstname" placeholder="DATE OF BIRTH" type="text" className="bg-inherit border border-black focus:outline-none p-2"/>
-             <input name="firstname" placeholder="EMAIL" type="text" className="bg-inherit border border-black focus:outline-none p-2"/>
-             <input name="firstname" placeholder="MOBILE NUMBER" type="text" className="bg-inherit border border-black focus:outline-none p-2"/>
-             <input name="firstname" placeholder="ADDRESS" type="text" className="bg-inherit border border-black focus:outline-none p-2"/>
-             <input name="firstname" placeholder="CITY" type="text" className="bg-inherit border border-black focus:outline-none p-2"/>
-             <input name="firstname" placeholder="INSTAGRAM" type="text" className="bg-inherit border border-black focus:outline-none p-2"/>
-             <input name="firstname" placeholder="TALENT/HOBBIES" type="text" className="bg-inherit border border-black focus:outline-none p-2"/>
+             <input name="firstname" placeholder="FIRSTNAME" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2"/>
+             <input name="firstname" placeholder="LASTNAME" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2"/>
+             <input name="firstname" placeholder="DATE OF BIRTH" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2"/>
+             <input name="firstname" placeholder="EMAIL" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2"/>
+             <input name="firstname" placeholder="MOBILE NUMBER" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2"/>
+             <input name="firstname" placeholder="ADDRESS" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2"/>
+             <input name="firstname" placeholder="CITY" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2"/>
+             <input name="firstname" placeholder="INSTAGRAM" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2"/>
+             <input name="firstname" placeholder="TALENT/HOBBIES" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2"/>
 
                   </div>
            <div className="flex items-center ml-5 mt-5"> 
