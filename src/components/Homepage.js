@@ -11,6 +11,7 @@ const Homepage = () => {
 <p className="text-center mt-7 ">Yanga Model Management is a modelling agency located in Lagos, Southwest Nigeria specializing in the management and marketing of homegrown fashion, runway and commercial models with the aim of nurturing long term and lucrative careers for our models by supporting and giving them the space to grow.</p>
 <Link to="/Scouting" className="mt-4 underline ml-2 ">Become a YangaModel</Link>
 
+
         </div>
        
         
