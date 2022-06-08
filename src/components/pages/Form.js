@@ -20,7 +20,17 @@ const Form = () => {
       <input className="ml-1 h-4 w-4" type="radio" name="sex" id="male-radio" />
   </div>
     <span className="mt-10">MEASUREMENT</span>
-    <div className="">
+    <div className="grid grid-rows-4 grid-flow-col gap-2">
+    <input name="Mobile Number" placeholder="MOBILE NUMBER" type="number" className="placeholder-black bg-inherit border border-black focus:outline-none p-2"/>
+    <input name="address" placeholder="ADDRESS" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2"/>
+    <input name="city" placeholder="CITY" type='text' className="placeholder-black bg-inherit border border-black focus:outline-none p-2"/>
+    <input name="Instagram" placeholder="INSTAGRAM" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2"/>
+    <input name="Mobile Number" placeholder="MOBILE NUMBER" type="number" className="placeholder-black bg-inherit border border-black focus:outline-none p-2"/>
+    <input name="address" placeholder="ADDRESS" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2"/>
+    <input name="city" placeholder="CITY" type='text' className="placeholder-black bg-inherit border border-black focus:outline-none p-2"/>
+    <input name="Instagram" placeholder="INSTAGRAM" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2"/>
+   
+
     </div>
 </form> );
 }
