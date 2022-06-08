@@ -1,5 +1,6 @@
 import Header from "../Header";
 
+
 const Scouting = () => {
     return (
         <div className="bg-[#F8DBCB] h-screen w-full">
@@ -36,7 +37,7 @@ if we believe that you have the right characteristics to become a Yanga Model.  
                <span>MALE</span>
                <input className="ml-1 h-4 w-4" type="radio" name="sex" id="male-radio" />
            </div>
-             <span className="mt-10">MEASUREMENT</span>
+             <span className="mt-10">MEASUREMEN</span>
              <div className="">
              </div>
          </form>
