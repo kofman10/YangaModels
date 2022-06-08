@@ -15,13 +15,7 @@ if we believe that you have the right characteristics to become a Yanga Model.  
              <div className="flex flex-col justify-center gap-3 mx-5 "> 
              <input name="firstname" placeholder="FIRSTNAME" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2"/>
              <input name="firstname" placeholder="LASTNAME" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2"/>
-             
-             <div class="datepicker relative form-floating mb-3 xl:w-96" data-mdb-toggle-button="false">
-    <input type="date"
-      class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-      placeholder="Select a date" data-mdb-toggle="datepicker" />
-    <label for="floatingInput" class="text-gray-700">Select a date</label>
-  </div>
+             <input type="date" min='05-01-1980' name="date of birth" id="date" className="placeholder-black bg-inherit border border-black  p-2"/>
              <input name="email" placeholder="EMAIL" type="email" className="placeholder-black bg-inherit border border-black focus:outline-none p-2"/>
              <input name="Mobile Number" placeholder="MOBILE NUMBER" type="number" className="placeholder-black bg-inherit border border-black focus:outline-none p-2"/>
              <input name="address" placeholder="ADDRESS" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2"/>
