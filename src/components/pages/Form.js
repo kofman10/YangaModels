@@ -48,16 +48,16 @@ const Form = () => {
      <span className="ml-5">PHOTO & VIDEO SUBMISSION </span>
    <div className="flex flex-col gap-3 mx-5 mt-2">
     <div className="border border-dotted border-black h-[250px] w-3/4">
-      <span className="p-3">Photo 1</span>
+      <span className="p-3">#Photo 1</span>
     </div>  
     <div className="border border-dotted border-black h-[250px] w-3/4">
-      <span className="p-3">Photo 2</span>
+      <span className="p-3">#Photo 2</span>
     </div>
     <div className="border border-dotted border-black h-[250px] w-3/4">
-      <span className="p-3">Photo 3</span>
+      <span className="p-3">#Photo 3</span>
     </div>
     <div className="border border-dotted border-black h-[250px] w-3/4">
-      <span className="p-3">Photo 4</span>
+      <span className="p-3">#Photo 4</span>
     </div>
    </div>
    <p className="mx-5 mt-5">We want to know more about you as a porson,a funny story  or something most people
