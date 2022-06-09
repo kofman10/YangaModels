@@ -10,7 +10,7 @@ const Scouting = () => {
 Do you have a story to tell? Please complete all the sections below and we will get in contact with you
 if we believe that you have the right characteristics to become a Yanga Model.  </p>
 
-<span className="ml-5">INFO</span>
+<p  className="ml-5 mb-5">INFO</p >
        <Form />
         </div>
       );
