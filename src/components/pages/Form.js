@@ -3,7 +3,7 @@ const Form = () => {
     return (   
       
     <form action="" >
-    <div className="flex flex-col justify-center gap-3 mx-5 "> 
+    <div className="flex flex-col justify-center space-y-3 mx-5 "> 
     <input name="firstname" placeholder="FIRSTNAME" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2"/>
     <input name="lastname" placeholder="LASTNAME" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2"/>
     <input name="date of birth" placeholder="DATE OF BIRTH" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2"/>
@@ -49,7 +49,7 @@ const Form = () => {
     
 
      <span className="ml-5">PHOTO & VIDEO SUBMISSION </span>
-   <div className="flex flex-col gap-3 mx-5 mt-2">
+   <div className="flex flex-col space-y-3 mx-5 mt-2">
     <div className="border border-dotted border-black h-[250px] w-3/4">
       <span className="p-3">#Photo 1</span>
     </div>  
