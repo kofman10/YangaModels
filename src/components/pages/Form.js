@@ -65,19 +65,19 @@ const Form = () => {
 
      <span className="ml-5">PHOTO & VIDEO SUBMISSION </span>
    <div className="flex flex-col space-y-3 mx-5 mt-2">
-    <label className="border border-dashed border-black h-[250px] w-3/4">
+    <label className="border border-dashed border-black h-[275px] w-3/4">
       <span className="p-3">#Photo 1</span>
       <input  className="hidden"  accept=".jpeg, .jpg, .png, .webp, .svg" type="file" name="picture" id="picture"/>
     </label>  
-    <label className="border border-dashed border-black h-[250px] w-3/4">
+    <label className="border border-dashed border-black h-[275px] w-3/4">
       <span className="p-3">#Photo 2</span>
       <input  className="hidden"  accept=".jpeg, .jpg, .png, .webp, .svg" type="file" name="picture" id="picture"/>
     </label>
-    <label className="border border-dashed border-black h-[250px] w-3/4">
+    <label className="border border-dashed border-black h-[275px] w-3/4">
       <span className="p-3">#Photo 3</span>
       <input  className="hidden"  accept=".jpeg, .jpg, .png, .webp, .svg" type="file" name="picture" id="picture"/>
     </label>
-    <label className="border border-dashed border-black h-[250px] w-3/4">
+    <label className="border border-dashed border-black h-[275px] w-3/4">
       <span className="p-3">#Photo 4</span>
       <input  className="hidden"  accept=".jpeg, .jpg, .png, .webp, .svg" type="file" name="picture" id="picture"/>
     </label>
