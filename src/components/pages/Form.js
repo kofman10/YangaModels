@@ -1,5 +1,4 @@
 import { useForm } from "react-hook-form";
-import { useRef } from "react";
 
 const Form = () => {
   const { register, watch} = useForm();
@@ -7,10 +6,6 @@ const Form = () => {
   const sex = watch('sex')
    // console.log(sex)
 
-   const hiddenFileInput = useRef(null);
-   const handleClick = event => {
-    hiddenFileInput.current.click();
-  };
 
     return (   
       
