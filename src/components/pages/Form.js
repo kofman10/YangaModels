@@ -1,11 +1,16 @@
 import { useForm } from "react-hook-form";
-
+import { useRef } from "react";
 
 const Form = () => {
   const { register, watch} = useForm();
    
   const sex = watch('sex')
    // console.log(sex)
+
+   const hiddenFileInput = useRef(null);
+   const handleClick = event => {
+    hiddenFileInput.current.click();
+  };
 
     return (   
       
@@ -20,7 +25,7 @@ const Form = () => {
     <input required name="city" placeholder="CITY" type='text' className="placeholder-black bg-inherit border border-black focus:outline-none p-2"/>
     <input required name="Instagram" placeholder="INSTAGRAM" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2"/>
     <input required name="Talent/Hobbies" placeholder="TALENT/HOBBIES" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2"/>
-
+    
          </div>
   <div className="flex items-center ml-5 mt-5 mb-5"> 
       <span className="mr-5">SEX :</span>
@@ -65,18 +70,22 @@ const Form = () => {
 
      <span className="ml-5">PHOTO & VIDEO SUBMISSION </span>
    <div className="flex flex-col space-y-3 mx-5 mt-2">
-    <div className="border border-dotted border-black h-[250px] w-3/4">
+    <label className="border border-dashed border-black h-[250px] w-3/4">
       <span className="p-3">#Photo 1</span>
-    </div>  
-    <div className="border border-dotted border-black h-[250px] w-3/4">
+      <input  className="hidden"  accept=".jpeg, .jpg, .png, .webp, .svg" type="file" name="picture" id="picture"/>
+    </label>  
+    <label className="border border-dashed border-black h-[250px] w-3/4">
       <span className="p-3">#Photo 2</span>
-    </div>
-    <div className="border border-dotted border-black h-[250px] w-3/4">
+      <input  className="hidden"  accept=".jpeg, .jpg, .png, .webp, .svg" type="file" name="picture" id="picture"/>
+    </label>
+    <label className="border border-dashed border-black h-[250px] w-3/4">
       <span className="p-3">#Photo 3</span>
-    </div>
-    <div className="border border-dotted border-black h-[250px] w-3/4">
+      <input  className="hidden"  accept=".jpeg, .jpg, .png, .webp, .svg" type="file" name="picture" id="picture"/>
+    </label>
+    <label className="border border-dashed border-black h-[250px] w-3/4">
       <span className="p-3">#Photo 4</span>
-    </div>
+      <input  className="hidden"  accept=".jpeg, .jpg, .png, .webp, .svg" type="file" name="picture" id="picture"/>
+    </label>
    </div>
    <p className="mx-5 mt-5">We want to know more about you as a porson,a funny story  or something most people
 dont know about you. Get creative and show us who you are.   [sample vide link]</p>
