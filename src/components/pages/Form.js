@@ -67,7 +67,7 @@ const Form = () => {
            <Imgupload />
    <p className="mx-5 mt-5">We want to know more about you as a porson,a funny story  or something most people
 dont know about you. Get creative and show us who you are.   [sample vide link]</p>
-<input name="Instagram" placeholder="UPLOAD VIDEO HERE" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mx-5"/>
+<input required name="Instagram" placeholder="UPLOAD VIDEO HERE" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mx-5"/>
  
  <section className=" mt-5  mx-5">
    <span>TIPS</span>
