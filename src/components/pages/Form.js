@@ -1,5 +1,4 @@
 import { useForm } from "react-hook-form";
-import modelyang from '../assets/modelyang.jpg'
 import Imgupload from "./Imgupload";
 
 const Form = () => {
