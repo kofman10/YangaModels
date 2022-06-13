@@ -1,10 +1,11 @@
 import { useForm } from "react-hook-form";
+import modelyang from '../assets/modelyang.jpg'
+import Imgupload from "./Imgupload";
 
 const Form = () => {
   const { register, watch} = useForm();
    
   const sex = watch('sex')
-   // console.log(sex)
 
 
     return (   
@@ -64,24 +65,7 @@ const Form = () => {
     
 
      <span className="ml-5">PHOTO & VIDEO SUBMISSION </span>
-   <div className="flex flex-col space-y-3 mx-5 mt-2">
-    <label className="border border-dashed border-black h-[275px] w-3/4">
-      <span className="p-3">#Photo 1</span>
-      <input  className="hidden"  accept=".jpeg, .jpg, .png, .webp, .svg" type="file" name="picture" id="picture"/>
-    </label>  
-    <label className="border border-dashed border-black h-[275px] w-3/4">
-      <span className="p-3">#Photo 2</span>
-      <input  className="hidden"  accept=".jpeg, .jpg, .png, .webp, .svg" type="file" name="picture" id="picture"/>
-    </label>
-    <label className="border border-dashed border-black h-[275px] w-3/4">
-      <span className="p-3">#Photo 3</span>
-      <input  className="hidden"  accept=".jpeg, .jpg, .png, .webp, .svg" type="file" name="picture" id="picture"/>
-    </label>
-    <label className="border border-dashed border-black h-[275px] w-3/4">
-      <span className="p-3">#Photo 4</span>
-      <input  className="hidden"  accept=".jpeg, .jpg, .png, .webp, .svg" type="file" name="picture" id="picture"/>
-    </label>
-   </div>
+           <Imgupload />
    <p className="mx-5 mt-5">We want to know more about you as a porson,a funny story  or something most people
 dont know about you. Get creative and show us who you are.   [sample vide link]</p>
 <input name="Instagram" placeholder="UPLOAD VIDEO HERE" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mx-5"/>
