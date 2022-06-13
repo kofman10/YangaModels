@@ -5,6 +5,9 @@ import Contact from "./components/pages/Contact";
 import Men from "./components/pages/Men";
 import Scouting from "./components/pages/Scouting";
 import Women from "./components/pages/Women";
+import Registration from "./components/pages/Registration";
+import ModelList from "./components/pages/ModelList";
+
 
 function App() {
   return (
@@ -19,12 +22,16 @@ function App() {
         
          <Route path="/About" element = {<About/>} />
               
+         <Route path="/Registration" element = {<Registration />} />
          
+         <Route path="/ModelList" element = {<ModelList />} />
+
          <Route path="/Contact" element = {<Contact />} />
        
         </Routes>
      </div>
   );
 }
+
 
 export default App;
