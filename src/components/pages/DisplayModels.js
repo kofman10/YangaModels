@@ -1,12 +1,14 @@
 
 import React, { useEffect, useState } from "react";
+import ModelManager from "../../services/ModelManager";
 import { collection ,getDocs } from "firebase/firestore";
 import { db } from "../../firebase-config";
 
-const Women = () => {
+
+function DisplayModels(){
 
     const [models , setModels] = useState([])
-    const ModelsCollectionRef = collection(db, "women");
+    const ModelsCollectionRef = collection(db, "models");
 
     useEffect(() => {
         const getModels = async ()=> {
@@ -32,22 +34,12 @@ const Women = () => {
                     instagram: {model.instagram}<br></br>
                     talent : {model.talent}<br></br>
                     sex : {model.sex}<br></br>
-                    height : {model.height}<br></br>
-                    weight : {model.weight}<br></br>
-                    waist : {model.waist}<br></br>
-                    bust : {model.bust}<br></br>
-                    hips : {model.hips}<br></br>
-                    eyeColor : {model.eyeColor}<br></br>
-                    shoeSize : {model.shoeSize}<br></br>
-                    dressSize : {model.dressSize}<br></br>
-
                 </div>
             )
         }
 
+
     )} </div>;
 }
 
-
-
-export default Women;
+export default DisplayModels;

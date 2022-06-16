@@ -86,17 +86,17 @@ const Registration = () => {
 
     
     return (
-
       
-        <div className="bg-[#F8DBCB] h-screen w-full">
-            <Header />
+      
+      <div className="bg-[#F8DBCB] h-screen w-full">
+          <Header />
        <h1>Become a yangamodel </h1>
        <p>There is a story behind every face at Yanga Models.
 Do you have a story to tell? Please complete all the sections below and we will get in contact with you
 if we believe a that you have the right characteristics to become a Yanga Model.  </p>
 
 <span>INFO</span>
-         <form action="" onClick={handleSubmit()} >
+         <form action="handleSubmit()" onClick={handleSubmit()} >
              <div className="flex flex-col justify-center gap-3 mx-5 "> 
              <input name="firstname" placeholder="FIRSTNAME" type="text" value={firstname} className="placeholder-black bg-inherit border border-black focus:outline-none p-2"/>
              <input name="lastname" placeholder="LASTNAME" type="text" value={lastname} className="placeholder-black bg-inherit border border-black focus:outline-none p-2"/>
@@ -124,9 +124,8 @@ if we believe a that you have the right characteristics to become a Yanga Model.
            </div>
              {/* <span className="mt-10">MEASUREMEN</span>
              <div className="">
-             </div> */}
-             <input type="submit" value="submit" />
-             <button color="blue"> submit</button>
+            </div> */}
+            <button  type="submit" className="border bg-[#B4917E] uppercase font-bold rounded-md ml-5 py-3 px-5 mt-5 mb-10"> Submit application</button>
          </form>
         </div>
       );
