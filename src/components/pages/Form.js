@@ -1,5 +1,4 @@
 import { useForm } from "react-hook-form";
-import modelyang from '../assets/modelyang.jpg'
 import Imgupload from "./Imgupload";
 import { collection ,addDoc } from "firebase/firestore";
 import { db } from "../../firebase-config";
@@ -77,15 +76,17 @@ console.log("male called ")
     console.log(newModel);
   }
 
-
-  const { register, watch} = useForm();
+  const { register, watch, handleSubmit} = useForm();
    
   const sexValue = watch('sex')
 
+  const onSubmit = (data) => {
+     console.log(data)
+  }
 
     return (   
       
-    <form  action="">
+    <form  onSubmit = {handleSubmit(onSubmit)}>
     <div className="flex flex-col justify-center space-y-3 mx-5 "> 
     <input required name="firstname" placeholder="FIRSTNAME" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2" onChange={ (event) => {setFirstname(event.target.value);}} />
     <input required name="lastname" placeholder="LASTNAME" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2" onChange={ (event) => {setlastname(event.target.value);}} />
@@ -143,7 +144,7 @@ console.log("male called ")
            <Imgupload />
    <p className="mx-5 mt-5">We want to know more about you as a porson,a funny story  or something most people
 dont know about you. Get creative and show us who you are.   [sample vide link]</p>
-<input name="Instagram" placeholder="UPLOAD VIDEO HERE" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mx-5" />
+<input  required name="Instagram" placeholder="UPLOAD VIDEO HERE" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mx-5"/>
  
  <section className=" mt-5  mx-5">
    <span>TIPS</span>
