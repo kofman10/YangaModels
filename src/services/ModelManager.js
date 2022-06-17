@@ -1,36 +1,36 @@
-// import { db } from "../firebase-config";
+ import { db } from "../firebase-config";
 
-// // import { collection, getDocs, getDoc, addDoc, updateDoc, deleteDoc, doc} from "firebase/firestore";
+import { collection, getDocs, getDoc, addDoc, updateDoc, deleteDoc, doc} from "firebase/firestore";
 
 
-// const ModelsCollectionRef = collection(db, "models");
-// class ModelManager {
-//   addModels = (newModel) => {
-//     return addDoc(ModelsCollectionRef, newModel);
-//   };
+const ModelsCollectionRef = collection(db, "models");
+class ModelManager {
+  addModels = (newModel) => {
+    return addDoc(ModelsCollectionRef, newModel);
+  };
 
-//   addModel = async (newModel) => {
-//     await addDoc(ModelsCollectionRef, newModel);
-//   };
+  addModel = async (newModel) => {
+    await addDoc(ModelsCollectionRef, newModel);
+  };
 
-//   updateModel = (id, updatedModel) => {
-//     const modelDoc = doc(db, "models", id);
-//     return updateDoc(modelDoc, updatedModel);
-//   };
+  updateModel = (id, updatedModel) => {
+    const modelDoc = doc(db, "models", id);
+    return updateDoc(modelDoc, updatedModel);
+  };
 
-//   deleteModel = (id) => {
-//     const modelDoc = doc(db, "models", id);
-//     return deleteDoc(modelDoc);
-//   };
+  deleteModel = (id) => {
+    const modelDoc = doc(db, "models", id);
+    return deleteDoc(modelDoc);
+  };
 
-//   getAllModels = () => {
-//     return getDocs(ModelsCollectionRef);
-//   };
+  getAllModels = () => {
+    return getDocs(ModelsCollectionRef);
+  };
 
-//   getModel = (id) => {
-//     const modelDoc = doc(db, "models", id);
-//     return getDoc(modelDoc);
-//   };
-// }
+  getModel = (id) => {
+    const modelDoc = doc(db, "models", id);
+    return getDoc(modelDoc);
+  };
+}
 
-// export default new ModelManager();
+export default new ModelManager();

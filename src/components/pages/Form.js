@@ -1,13 +1,65 @@
 import { useForm } from "react-hook-form";
 import Imgupload from "./Imgupload";
 import { collection ,addDoc } from "firebase/firestore";
+// import { db } from "../../firebase--Config";
 import { db } from "../../firebase-config";
 import React, { useEffect, useState } from "react";
+import MultiUpload from "./Mfu";
+import { storage } from "../../firebase-config";
+import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 
 
 
 
 const Form = () => {
+
+  // file uplaod section
+  const [images, setImages] = useState([]);
+  const [urls, setUrls] = useState([]);
+  const [progress, setProgress] = useState(0);
+
+
+  const handleChange = (e) => {
+      const newImage = e.target.files[0];
+      // newImage[".name"]
+      setImages((prevState) => [...prevState, newImage]);
+    };
+
+    const handleUpload = (e) => {
+      for (let i = 0; i < 4; i++) {
+          console.log(images[i].name)
+      }
+
+      let fullname = firstname+"_"+lastname
+      let no =0;
+let pictureType = ["Full lenght" , "Profile" , "Close up", "Waist up"]
+      images.map((image,pis) => {
+          console.log("called" + image.name )
+        // const imageRef = ref(storage, `images/${image.name + image.name}`);
+        const imageRef = ref(storage, `images/${pictureType[no]}/${fullname}`); 
+        no++;
+        uploadBytes(imageRef, image)
+          .then(() => {
+            getDownloadURL(imageRef)
+              .then((url) => {
+                  setUrls((prevState) => [...prevState, urls]);
+              })
+              .catch((error) => {
+                console.log(error.message, "error getting the image url");
+              });
+          //   setImage(null);
+          })
+          .catch((error) => {
+            console.log(error.message);
+          });
+      });
+    }
+  
+
+   
+
+    // end==========================
+
 
   const [ id , setModelId ] = useState("")
   const [ firstname , setFirstname ] = useState("")
@@ -31,7 +83,7 @@ const Form = () => {
   const [ hips , setHips ] = useState("")
   const [ dressSize , setDressSize ] = useState("")
   const [ suitSize , setSuitSize ] = useState("")
-  const [message, setMessage] = useState({ error: false, msg: "" });
+  // const [message, setMessage] = useState({ error: false, msg: "" });
   
   
   const newModel = { id,firstname,lastname,dateOfBirth,email,mobileNumber,address,city,instagram,Talent,sex,height,weight,waist,bust,chest,eyeColor,shoeSize,suitSize,dressSize,inSeam,hips };
@@ -45,43 +97,42 @@ const Form = () => {
   
   const createNewModel = async () => {
 
+    console.log("images: ", images);
+    console.log("urls", urls);
+
     if( sex === "male"){
-      
-console.log("male called ")
+      createMale()
+      console.log("male called ")
     }else {
+      createFemale()
       console.log("female called")
     }
 
-  }
+    handleUpload()
 
-
-  const createModel = async () => {
-    // setModelId("");
-    
-    await addDoc(ModelsCollectionRef,newModel)
-    console.log(newModel);
   }
 
   const createMale = async () => {
-    // setModelId("");
-    
-    await addDoc(MenCollectionRef,newModel)
-    console.log(newModel);
+    await addDoc(MenCollectionRef,maleModel)
+    console.log(maleModel);
   }
 
   const createFemale = async () => {
-    // setModelId("");
-    
-    await addDoc(WomenCollectionRef,newModel)
-    console.log(newModel);
+    await addDoc(WomenCollectionRef,femaleModel)
+    console.log(femaleModel);
   }
 
+  // const fileUploader = () => {
+
+  // }
   const { register, watch, handleSubmit} = useForm();
    
   const sexValue = watch('sex')
 
   const onSubmit = (data) => {
      console.log(data)
+     createNewModel();
+     
   }
 
     return (   
@@ -141,7 +192,15 @@ console.log("male called ")
     
 
      <span className="ml-5">PHOTO & VIDEO SUBMISSION </span>
-           <Imgupload />
+           {/* <Imgupload /> */}
+           <span className="p-3">#Photo 1*</span>
+      <input required  className=""  accept="image/*" type="file" name="pic1" onChange={handleChange} /><br></br>
+      <span className="p-3">#Photo 2*</span>
+      <input required  className=""  accept="image/*" type="file" name="pic2" onChange={handleChange} /><br></br>
+      <span className="p-3">#Photo 3*</span>
+      <input required  className=""  accept="image/*" type="file" name="pic3" onChange={handleChange} /><br></br>
+      <span className="p-3">#Photo 4*</span>
+      <input required  className=""  accept="image/*" type="file" name="pic4" onChange={handleChange} /><br></br>
    <p className="mx-5 mt-5">We want to know more about you as a porson,a funny story  or something most people
 dont know about you. Get creative and show us who you are.   [sample vide link]</p>
 <input  required name="Instagram" placeholder="UPLOAD VIDEO HERE" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mx-5"/>
@@ -164,7 +223,7 @@ fashion shoot.</li>
 </ul>
  </section>
 
- <button onClick={createNewModel} type="submit" className="border bg-[#B4917E] uppercase font-bold rounded-md ml-5 py-3 px-5 mt-5 mb-10"> Submit application</button>
+ <button type="submit" className="border bg-[#B4917E] uppercase font-bold rounded-md ml-5 py-3 px-5 mt-5 mb-10"> Submit application</button>
 </form> );
 }
  
