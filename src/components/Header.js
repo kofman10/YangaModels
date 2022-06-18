@@ -14,10 +14,10 @@ const Header = () => {
 
     return (
           <header> 
-  <nav className="flex justify-between ">
-             <a href ='/' className ="flex mt-2 ml-4 font-fraunces uppercase font-semibold text-sm md:text-xl italic items-center">Yanga ModelManagement <img className="h-8 w-8 inline-block" src={yangabg} alt="" /></a>
+  <nav className="flex justify-between">
+             <a href ='/' className ="flex mt-2 ml-3 font-fraunces uppercase font-extrabold text-sm md:text-xl italic items-center">Yanga Model Management <img className="h-8 w-8 block" src={yangabg} alt="" /></a>
              <div>
-              <MenuIcon onClick={showMenu} className = " h-6 w-6 cursor-pointer md:hidden mt-2 mr-4"/>
+              <MenuIcon onClick={showMenu} className = " h-6 w-6 cursor-pointer md:hidden mt-3 mr-3"/>
                           
                     <div className="hidden md:flex " ><Link to='/' className="underline">Menu</Link></div>
                   
