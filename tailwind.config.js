@@ -3,6 +3,12 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}", 
   ],
   theme: {
+    fontFamily: {
+      'dancing': ['Dancing Script', 'cursive'],
+      'barlow': ['Barlow Condensed', 'sans-serif'],
+      'fraunces': ['Fraunces', 'serif']
+    },
+
     extend: {
       transitionProperty: {
         left : 'left',
