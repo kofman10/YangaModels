@@ -1,12 +1,12 @@
 
 import React, { useEffect, useState } from "react";
 import { collection ,getDocs } from "firebase/firestore";
-import { db } from "../../firebase--Config";
+import { db } from "../../firebase-config";
 
-const Women = () => {
+const Men = () => {
 
     const [models , setModels] = useState([])
-    const ModelsCollectionRef = collection(db, "women");
+    const ModelsCollectionRef = collection(db, "men");
 
     useEffect(() => {
         const getModels = async ()=> {
@@ -21,7 +21,9 @@ const Women = () => {
         
         (model)=>{
             return (
+                
                 <div>
+                    <h1>registration successfull </h1>
                     {" "}
                     firstname : {model.firstname}<br></br>
                     lastname: {model.lastname}<br></br>
@@ -35,11 +37,11 @@ const Women = () => {
                     height : {model.height}<br></br>
                     weight : {model.weight}<br></br>
                     waist : {model.waist}<br></br>
-                    bust : {model.bust}<br></br>
-                    hips : {model.hips}<br></br>
+                    chest : {model.chest}<br></br>
+                    inSeam : {model.inSeam}<br></br>
                     eyeColor : {model.eyeColor}<br></br>
                     shoeSize : {model.shoeSize}<br></br>
-                    dressSize : {model.dressSize}<br></br>
+                    suitSize : {model.suitSize}<br></br>
 
                 </div>
             )
@@ -50,4 +52,4 @@ const Women = () => {
 
 
 
-export default Women;
+export default Men;

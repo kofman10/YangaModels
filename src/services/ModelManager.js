@@ -1,36 +1,45 @@
- import { db } from "../firebase-config";
-
-import { collection, getDocs, getDoc, addDoc, updateDoc, deleteDoc, doc} from "firebase/firestore";
 
 
-const ModelsCollectionRef = collection(db, "models");
+import { collection, addDoc } from "firebase/firestore";
+import { db, storage } from "../firebase--Config";
+import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
+
+const MenCollectionRef = collection(db, "men");
+const WomenCollectionRef = collection(db, "women");
+
+
 class ModelManager {
-  addModels = (newModel) => {
-    return addDoc(ModelsCollectionRef, newModel);
-  };
+  createMale = async (maleModel) => {
 
-  addModel = async (newModel) => {
-    await addDoc(ModelsCollectionRef, newModel);
-  };
+    console.log("male called ")
+    await addDoc(MenCollectionRef, maleModel)
+    console.log(maleModel);
+  }
 
-  updateModel = (id, updatedModel) => {
-    const modelDoc = doc(db, "models", id);
-    return updateDoc(modelDoc, updatedModel);
-  };
+  createFemale = async (femaleModel) => {
+    console.log("female called ")
+    await addDoc(WomenCollectionRef, femaleModel)
+    console.log(femaleModel);
+  }
 
-  deleteModel = (id) => {
-    const modelDoc = doc(db, "models", id);
-    return deleteDoc(modelDoc);
-  };
+  handleUpload = (fullname, images,sex) => {
+    for (let i = 0; i < 4; i++) {
+      console.log(images[i].name)
+    }
 
-  getAllModels = () => {
-    return getDocs(ModelsCollectionRef);
-  };
+    let no = 0;
+    let pictureType = ["Full lenght", "Profile", "Close up", "Waist up"]
+    images.map((image, pis) => {
+      console.log("called" + image.name + fullname)
 
-  getModel = (id) => {
-    const modelDoc = doc(db, "models", id);
-    return getDoc(modelDoc);
-  };
+      const imageRef = ref(storage, `${sex}/${pictureType[no]}/${fullname}`);
+      no++;
+      uploadBytes(imageRef, image)
+        .catch((error) => {
+          console.log(error.message);
+        });
+    });
+  }
 }
 
 export default new ModelManager();
