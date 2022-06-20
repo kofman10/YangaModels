@@ -1,10 +1,13 @@
 import './marquee.css'
 
 const Marquee = () => {
-    return (  <div className='bg-black text-[#F8DBCB] marquee'>
+    
+    return (<div className='marquee-container'>
+        <p className='marquee '>
        © 2022 YANGA MODEL MANAGEMENT. ALL RIGHTS RESERVED.
     
-      </div>  );
+      </p>
+         </div>    );
 }
  
 export default Marquee;

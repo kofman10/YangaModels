@@ -1,16 +1,24 @@
-
-
-.marquee {
-    white-space: nowrap;
+.marquee-container{
+    display: flex;
+    align-items: center;
+    background: #000;
     overflow: hidden;
 }
-
-.marquee {
-    display: inline-block;
-    animation: animate 10s linear infinite;
+.marquee{
+    color: #F8DBCB;
+    white-space: nowrap;
+    animation: marquee 10s infinite linear; /* notice the infinite */
 }
-@keyframes animate {
-    100%{
-        transform: translate(-100%, 0);
+
+.marquee:after{
+    content: "© 2022 YANGA MODEL MANAGEMENT. ALL RIGHTS RESERVED.";
+}
+
+@keyframes marquee{
+    0% {
+        transform: translateX(0)
+    }
+    100% {
+        transform: translateX(-50%)
     }
 }
