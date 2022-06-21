@@ -4,7 +4,7 @@ import Header from "../Header";
 
 const Contact = () => {
     return (
-        <div className="bg-[rgb(248,219,203)] min-h-screen w-full">
+        <div className="bg-[rgb(248,219,203)] min-h-screen w-full relative">
         <Header />
          <h1 className="uppercase text-4xl text-center mt-10"> Contact </h1>
          <hr className="border-1 border-black mt-4"/>
@@ -28,7 +28,7 @@ const Contact = () => {
              <p href="/" className="text-center font-semibold">whatsapp</p >
              </div>
          </section>
-         <Footer />
+         <Footer className = 'absolute bottom-0' />
          </div>
       );
 }

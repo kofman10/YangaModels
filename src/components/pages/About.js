@@ -3,7 +3,7 @@ import Header from "../Header";
 
 const About = () => {
   return (
-    <div className="bg-[#F8DBCB] w-full min-h-screen ">
+    <div className="bg-[#F8DBCB] w-full min-h-screen relative">
       <Header />
       <h1 className="mt-10 text-4xl text-center font-fraunces"> ABOUT US</h1>
       <hr className="border-1 border-black mt-4" />
@@ -21,7 +21,7 @@ const About = () => {
         the potential of every model that joins the Yanga family
       </p>
 
-      <Footer />
+      <Footer className = 'absolute bottom-0' />
     </div>
   );
 };
