@@ -7,11 +7,11 @@
 .marquee{
     color: #F8DBCB;
     white-space: nowrap;
-    animation: marquee 10s infinite linear; /* notice the infinite */
+    animation: marquee 12s infinite linear; 
 }
 
 .marquee:after{
-    content: "© 2022 YANGA MODEL MANAGEMENT. ALL RIGHTS RESERVED.";
+    content: "  © 2022 YANGA MODEL MANAGEMENT. ALL RIGHTS RESERVED.  ";
 }
 
 @keyframes marquee{

@@ -1,31 +1,34 @@
+import Footer from "../Footer";
 import Header from "../Header";
 
 
 const Contact = () => {
     return (
-        <div className="bg-[rgb(248,219,203)] h-screen w-full">
+        <div className="bg-[rgb(248,219,203)] min-h-screen w-full">
         <Header />
          <h1 className="uppercase text-4xl text-center mt-10"> Contact </h1>
          <hr className="border-1 border-black mt-4"/>
-         <section className="flex flex-col space-y-10 justify-center my-10 items-center ">
+         <section className="flex flex-col space-y-10 justify-center my-10 items-center uppercase">
              <div>
-                 <div className="text-center">Mail</div>
-                 <div className="text-center"> info@yangamodels.com</div>
+                 <p className="text-center opacity-90">Mail</p>
+                 <a href="mailto:info@yangamodels.com" className="text-center font-semibold"> info@yangamodels.com</a>
              </div>
              <div>
-             <div className="text-center">Phone</div>
-                 <div className="text-center"> +2348145896745</div>
+             <p className="text-center opacity-90">Phone</p>
+                 <p className="text-center font-semibold"> +2348137071908</p>
              </div>
              <div>
-             <div className="text-center">Follow us on</div>
-                 <div className="text-center"> Instagram</div>
-                 <div className="text-center"> twitter</div>
-                 <div className="text-center"> facebook</div>
+             <p className="text-center opacity-90">Follow us on</p>
+                 <p href="/" className="text-center font-semibold"> Instagram</p>
+                 <p href="/" className="text-center font-semibold"> twitter</p>
+                 <p href="/" className="text-center font-semibold"> facebook</p>
              </div>
              <div>
-             <div className="text-center">whatsapp</div>
+                 <p className="text-center opacity-90">Message us on</p>
+             <p href="/" className="text-center font-semibold">whatsapp</p >
              </div>
          </section>
+         <Footer />
          </div>
       );
 }

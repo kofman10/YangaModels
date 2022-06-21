@@ -1,4 +1,5 @@
 import { useForm } from "react-hook-form";
+import Footer from "../Footer";
 import Imgupload from "./Imgupload";
 
 const Form = () => {
@@ -11,7 +12,7 @@ const Form = () => {
   }
 
     return (   
-      
+      <> 
     <form  onSubmit = {handleSubmit(onSubmit)}>
     <div className="flex flex-col justify-center space-y-3 mx-5 "> 
     <input  required name="firstname" placeholder="FIRSTNAME" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2"/>
@@ -26,14 +27,14 @@ const Form = () => {
     
          </div>
   <div className="flex items-center ml-5 mt-5 mb-5"> 
-      <span className="mr-5">SEX :</span>
+      <span className="mr-5  font-semibold">SEX :</span>
       <span >FEMALE</span>
       <input  required className="mr-2 ml-1 h-4 w-4" value='female' type="radio" name="sex" id="female-radio" {...register("sex", { required: 'sex is required' })} />
       <span>MALE</span>
       <input  required className="ml-1 h-4 w-4" value='male' type="radio" name="sex" id="male-radio" {...register("sex", { required: 'sex is required' })} />
   </div>
 
-    <span className=" ml-5">MEASUREMENT</span>
+    <span className=" ml-5 font-semibold">MEASUREMENT</span>
     <div>
       { sex === 'female' && (  <div className="grid grid-cols-2 gap-2 w-full mt-5 mb-5">
     <input  required name="Height" placeholder="HEIGHT" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 ml-5"/>
@@ -66,15 +67,15 @@ const Form = () => {
     
     
 
-     <span className="ml-5">PHOTO & VIDEO SUBMISSION </span>
+     <span className="ml-5 font-semibold">PHOTO & VIDEO SUBMISSION </span>
            <Imgupload />
-   <p className="mx-5 mt-5">We want to know more about you as a porson,a funny story  or something most people
+   <p className="mx-5 mt-5 font-barlow tracking-wide">We want to know more about you as a person,a funny story  or something most people
 dont know about you. Get creative and show us who you are.   [sample vide link]</p>
 <input  required name="Instagram" placeholder="UPLOAD VIDEO HERE" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mx-5"/>
  
  <section className=" mt-5  mx-5">
-   <span>TIPS</span>
-   <ul className="flex flex-col gap-2">
+   <span className="font-semibold">TIPS</span>
+   <ul className="flex flex-col gap-2 font-barlow tracking-wide">
    <li>  Ensure that all fields are filled correctly</li>
    <li>While taking polaroids:</li>
    <li>Use natural light(outdoor) no studio lighting or flash photography</li>
@@ -91,7 +92,10 @@ fashion shoot.</li>
  </section>
 
  <button type="submit" className="border bg-[#B4917E] uppercase font-bold rounded-md ml-5 py-3 px-5 mt-5 mb-10"> Submit application</button>
-</form> );
+</form>
+<Footer />
+</>
+ );
 }
  
 export default Form;

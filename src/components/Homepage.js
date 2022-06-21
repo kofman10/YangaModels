@@ -1,10 +1,5 @@
+import Footer from "./Footer";
 import Header from "./Header";
-import { Icon } from '@iconify/react';
-import instagramFill from '@iconify/icons-akar-icons/instagram-fill';
-import twitterFill from '@iconify/icons-akar-icons/twitter-fill';
-import facebookFill from '@iconify/icons-akar-icons/facebook-fill';
-import whatsappFill from '@iconify/icons-akar-icons/whatsapp-fill';
-import Marquee from "./Marquee";
 
 
 
@@ -19,15 +14,8 @@ const Homepage = () => {
 <p className=" pb-10 font-barlow tracking-widest leading-relaxed">We aim at providing expertly scouted professionally trained models who will shape the legacy of the ever evolving advertising and fashion industry for years to come while fostering the careers and maximizing the potential of every model that joins the Yanga family</p>
 <a href ="/Scouting" className=" underline italic">Become a YangaModel</a>
 </main>
-<hr className="border-1 border-black w-full mb-4 mt-10"/>
 
-<footer className=" mt-4 pb-5 flex  space-x-5 justify-center ">
-   <a href="/"><Icon className="h-6 w-6" icon={instagramFill} height="6" /></a> 
-   <a href="/"><Icon className="h-6 w-6" icon={twitterFill} height="6" /></a>  
-   <a href="/"> <Icon className="h-6 w-6" icon={facebookFill} height="6" /></a> 
-   <a href="/"><Icon className="h-6 w-6" icon={whatsappFill} height="6" /></a> 
-</footer>
-    <Marquee />
+< Footer />
         </section>
        
         
