@@ -8,7 +8,7 @@ const Contact = () => {
         <Header />
          <h1 className="uppercase text-4xl text-center mt-10"> Contact </h1>
          <hr className="border-1 border-black mt-4"/>
-         <section className="flex flex-col space-y-10 justify-center mt-10 items-center uppercase">
+         <section className="flex flex-col space-y-10 justify-center mt-10 items-center uppercase pb-[125px]">
              <div>
                  <p className="text-center">Mail</p>
                  <a href="mailto:info@yangamodels.com" className="text-center font-semibold"> info@yangamodels.com</a>
@@ -23,7 +23,7 @@ const Contact = () => {
                  <p href="/" className="text-center font-semibold"> twitter</p>
                  <p href="/" className="text-center font-semibold"> facebook</p>
              </div>
-             <div className="pb-20">
+             <div>
                  <p className="text-center ">Message us on</p>
              <p href="/" className="text-center font-semibold">whatsapp</p >
              </div>

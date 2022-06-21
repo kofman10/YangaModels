@@ -14,7 +14,7 @@ const About = () => {
         term and lucrative careers for our models by supporting and giving them
         the space to grow.
       </p>
-      <p className=" pb-20 font-barlow tracking-widest leading-relaxed mx-5">
+      <p className=" pb-[125px] font-barlow tracking-widest leading-relaxed mx-5">
         We aim at providing expertly scouted professionally trained models who
         will shape the legacy of the ever evolving advertising and fashion
         industry for years to come while fostering the careers and maximizing
