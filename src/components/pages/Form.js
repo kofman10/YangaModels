@@ -91,7 +91,7 @@ fashion shoot.</li>
 </ul>
  </section>
 
- <button type="submit" className="border bg-[#B4917E] uppercase font-bold rounded-md ml-5 py-3 px-5 mt-5 mb-10"> Submit application</button>
+ <button type="submit" className="border bg-[#B4917E] uppercase font-bold rounded-md ml-5 py-3 px-5 mt-5"> Submit application</button>
 </form>
 <Footer />
 </>

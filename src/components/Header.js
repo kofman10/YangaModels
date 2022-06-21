@@ -2,7 +2,7 @@ import Menu from "./Menu";
 import { Link } from 'react-router-dom';
 import { MenuIcon } from '@heroicons/react/outline'
 import {useState} from 'react'
-import yangabg from './assets/yangabg.png'
+import yangalogopng from './assets/yanga logo png.png'
 
 
 const Header = () => {
@@ -16,7 +16,7 @@ const Header = () => {
     return (
           <header> 
   <nav className="flex justify-between">
-             <a href ='/' className ="flex mt-2 ml-3 font-fraunces uppercase font-extrabold text-sm md:text-xl italic items-center">Yanga Model Management <img className="h-8 w-8 block" src={yangabg} alt="" /></a>
+             <a href ='/' className ="ml-3 relative mt-1"><img className="h-10 w-32" src={yangalogopng} alt="" /></a>
              <div>
               <MenuIcon onClick={showMenu} className = " h-6 w-6 cursor-pointer md:hidden mt-3 mr-3"/>
                           

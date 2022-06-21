@@ -8,7 +8,7 @@ import './marquee.css'
 
 
 const Footer = () => {
-    return ( <>
+    return ( <section className=''>
     <hr className="border-1 border-black w-full mb-4 mt-10"/>
 
 <footer className=" mt-4 pb-5 flex  space-x-5 justify-center ">
@@ -24,7 +24,7 @@ const Footer = () => {
     
       </p>
          </div>
-    </> )
+    </section> )
 }
  
 export default Footer;
