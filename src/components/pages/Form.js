@@ -69,13 +69,13 @@ const Form = () => {
 
      <span className="ml-5 font-semibold">PHOTO & VIDEO SUBMISSION </span>
            <Imgupload />
-   <p className="mx-5 mt-5 font-barlow tracking-wide">We want to know more about you as a person,a funny story  or something most people
+   <p className="mx-5 mt-5  tracking-wide">We want to know more about you as a person,a funny story  or something most people
 dont know about you. Get creative and show us who you are.   [sample vide link]</p>
 <input  required name="Instagram" placeholder="UPLOAD VIDEO HERE" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mx-5"/>
  
  <section className=" mt-5  mx-5">
    <span className="font-semibold">TIPS</span>
-   <ul className="flex flex-col gap-2 font-barlow tracking-wide">
+   <ul className="flex flex-col gap-2  tracking-wide">
    <li>  Ensure that all fields are filled correctly</li>
    <li>While taking polaroids:</li>
    <li>Use natural light(outdoor) no studio lighting or flash photography</li>
