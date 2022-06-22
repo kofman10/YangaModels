@@ -23,6 +23,7 @@ const Men = () => {
             return (
                 <div>
                     {" "}
+                     {/* Lists all the male models ===> create a table for the values ===> each value(e.g firstname) is a table data*/}
                     firstname : {model.firstname}<br></br>
                     lastname: {model.lastname}<br></br>
                     email : {model.email}<br></br>

@@ -5,7 +5,7 @@ import Contact from "./components/pages/Contact";
 import Men from "./components/pages/Men";
 import Scouting from "./components/pages/Scouting";
 import Women from "./components/pages/Women";
-import MultiUpload from "./components/pages/Mfu";
+
 
 
 
