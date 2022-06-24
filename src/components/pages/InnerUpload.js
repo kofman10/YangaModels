@@ -33,7 +33,7 @@ const InnerUpload = () => {
        }, [image]);
 
     return ( <>  {preview ? (<img onClick={() => {setImage(null)}} className ="border border-dashed object-cover border-black h-[275px] w-3/4" src = {preview} alt = 'preview'/>) : ( <label className="border border-dashed border-black h-[275px] w-3/4">
-    <div className="">
+    <div required >
     <span className="p-3">#Photo *</span>
     <input  required  className="hidden"  accept="image/*" type="file" name="pic" id="pic" onChange={fileHandler}/>
     </div> 
