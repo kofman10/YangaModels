@@ -58,18 +58,10 @@ const Form = () => {
     }
     ModelManager.handleUpload(fullname, images,sex)
     console.log("uploaded");
-  //  s
    }catch( err ){
 console.log(err);
    }
 
-  //  const s = () => {
-  //   return (
-      
-  //     < Men />
-  //     )
-  //  }
-return(<Homepage/>)
   }
 
   const { register, watch, handleSubmit } = useForm();
@@ -84,7 +76,7 @@ return(<Homepage/>)
 
     <form onSubmit={createNewModel}>
       <div className="flex flex-col justify-center space-y-3 mx-5 ">
-        <input required name="firstname" placeholder="FIRSTnnNAME" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2" onChange={(event) => { setFirstname(event.target.value); }} />
+        <input required name="firstname" placeholder="FIRStNAME" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2" onChange={(event) => { setFirstname(event.target.value); }} />
         <input required name="lastname" placeholder="LASTNAME" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2" onChange={(event) => { setlastname(event.target.value); }} />
         <input required name="date of birth" placeholder="DATE OF BIRTH" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2" onChange={(event) => { setDateOfBirth(event.target.value); }} />
         <input required name="email" placeholder="EMAIL" type="email" className="placeholder-black bg-inherit border border-black focus:outline-none p-2" onChange={(event) => { setEmail(event.target.value); }} />
