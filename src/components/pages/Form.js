@@ -1,10 +1,10 @@
 import { useForm } from "react-hook-form";
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import ModelManager from "../../services/ModelManager";
-import Men from "./Men";
+// import Men from "./Men";
 import Footer from "../Footer";
-import Imgupload from "./Imgupload";
-import Homepage from "../Homepage";
+// import Imgupload from "./Imgupload";
+// import Homepage from "../Homepage";
 
 const Form = () => {
 
@@ -130,13 +130,13 @@ console.log(err);
 
       <span className="ml-5">PHOTO & VIDEO SUBMISSION </span>
       {/* <Imgupload /> */}
-      <span className="p-3">#Photo 1*</span>
+      <span className="p-3">FULL LENGHT</span>
       <input required className="" accept="image/*" type="file" name="pic1" onChange={handleChange} /><br></br>
-      <span className="p-3">#Photo 2*</span>
+      <span className="p-3">PROFILE</span>
       <input required className="" accept="image/*" type="file" name="pic2" onChange={handleChange} /><br></br>
-      <span className="p-3">#Photo 3*</span>
+      <span className="p-3">CLOSE UP</span>
       <input required className="" accept="image/*" type="file" name="pic3" onChange={handleChange} /><br></br>
-      <span className="p-3">#Photo 4*</span>
+      <span className="p-3">WAIST UP</span>
       <input required className="" accept="image/*" type="file" name="pic4" onChange={handleChange} /><br></br>
       <p className="mx-5 mt-5">We want to know more about you as a porson,a funny story  or something most people
         dont know about you. Get creative and show us who you are.   [sample vide link]</p>

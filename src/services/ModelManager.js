@@ -1,8 +1,8 @@
 
 
-import { collection, addDoc ,doc, setDoc} from "firebase/firestore";
+import { doc, setDoc} from "firebase/firestore";
 import { db, storage } from "../firebase--Config";
-import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
+import { ref, uploadBytes } from "firebase/storage";
 
 // const MenCollectionRef = collection(db, "male");
 // const WomenCollectionRef = collection(db, "female");
