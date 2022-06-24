@@ -18,7 +18,6 @@ const Form = () => {
   // =====================||===================== End of file upload =====================||===================== 
 
 
-  const [id, setModelId] = useState("")
   const [firstname, setFirstname] = useState("")
   const [lastname, setlastname] = useState("")
   const [dateOfBirth, setDateOfBirth] = useState("")
@@ -41,18 +40,20 @@ const Form = () => {
   const [dressSize, setDressSize] = useState("")
   const [suitSize, setSuitSize] = useState("")
 
+ 
+
   const maleModel = {  firstname, lastname, dateOfBirth, email, mobileNumber, address, city, instagram, Talent, sex, height, weight, waist, chest, eyeColor, shoeSize, suitSize, inSeam };
   const femaleModel = { firstname, lastname, dateOfBirth, email, mobileNumber, address, city, instagram, Talent, sex, height, weight, waist, bust, eyeColor, shoeSize, dressSize, hips };
 
-  let fullname = firstname + "_" + lastname
+  let fullname = firstname + " " + lastname
 
   const createNewModel = async (e) => {
     e.preventDefault();
    try{
     if (sex === "male") {
-      ModelManager.createMale(maleModel)
+      ModelManager.createMale(maleModel,fullname)
     } else {
-      ModelManager.createFemale(femaleModel)
+      ModelManager.createFemale(femaleModel,fullname)
     }
     ModelManager.handleUpload(fullname, images,sex)
     console.log("uploaded");
@@ -167,7 +168,9 @@ console.log(err);
       </section>
 
       <button  type="submit" className="border bg-[#B4917E] uppercase font-bold rounded-md ml-5 py-3 px-5 mt-5 mb-10"> Submit application</button>
-    </form>);
+    </form>
+    
+    );
     <Footer />
 }
 

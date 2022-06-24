@@ -1,24 +1,39 @@
 
 
-import { collection, addDoc } from "firebase/firestore";
+import { collection, addDoc ,doc, setDoc} from "firebase/firestore";
 import { db, storage } from "../firebase--Config";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 
-const MenCollectionRef = collection(db, "men");
-const WomenCollectionRef = collection(db, "women");
+const MenCollectionRef = collection(db, "male");
+const WomenCollectionRef = collection(db, "female");
 
+
+// Add a new document in collection "cities"
+// await setDoc(doc(db, "cities", "LA"), {
+//   name: "Los Angeles",
+//   state: "CA",
+//   country: "USA"
+// });
 
 class ModelManager {
-  createMale = async (maleModel) => {
+  // createMale = async (maleModel) => {
+
+  //   console.log("male called ")
+  //   await addDoc(MenCollectionRef, maleModel)
+  //   console.log(maleModel);
+  // }
+
+  createMale = async (maleModel,fullname) => {
 
     console.log("male called ")
-    await addDoc(MenCollectionRef, maleModel)
+    await setDoc(doc(db, "male", fullname), maleModel);
     console.log(maleModel);
   }
 
-  createFemale = async (femaleModel) => {
-    console.log("female called ")
-    await addDoc(WomenCollectionRef, femaleModel)
+  createFemale = async (femaleModel,fullname) => {
+    console.log("female called " + fullname )
+    await setDoc(doc(db, "female", fullname), femaleModel);
+    // await addDoc(WomenCollectionRef, )
     console.log(femaleModel);
   }
 

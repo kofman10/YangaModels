@@ -5,6 +5,7 @@ import Contact from "./components/pages/Contact";
 import Men from "./components/pages/Men";
 import Scouting from "./components/pages/Scouting";
 import Women from "./components/pages/Women";
+import Photos from "./components/pages/Photos";
 
 
 
@@ -21,6 +22,8 @@ function App() {
          <Route path="/Scouting" element = {<Scouting />} />
         
          <Route path="/About" element = {<About/>} />
+
+         <Route path="/Photos" element = {<Photos/>} />
 
          <Route path="/Contact" element = {<Contact />} />
        
