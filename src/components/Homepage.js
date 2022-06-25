@@ -15,7 +15,8 @@ const Homepage = () => {
 <a href ="/Scouting" className=" underline italic ">Become a Yanga Model</a>
 </main>
 
-< Footer />
+<div className='block md:absolute md:bottom-0  md:w-full'> <Footer /> </div> 
+
         </section>
        
         

@@ -13,7 +13,7 @@ const Form = () => {
 
     return (   
       <> 
-    <form  onSubmit = {handleSubmit(onSubmit)}>
+    <form  onSubmit = {handleSubmit(onSubmit)} className = 'md:w-3/4'>
     <div className="flex flex-col justify-center  mx-5 md:grid md:grid-cols-2 md:gap-5  md:mt-5 md:mb-5"> 
     <input  required name="firstname" placeholder="FIRSTNAME" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mt-2 md:mt-0"/>
     <input  required name="lastname" placeholder="LASTNAME" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mt-2 md:mt-0"/>
@@ -36,14 +36,14 @@ const Form = () => {
 
     <span className=" ml-5 font-semibold">MEASUREMENT</span>
     <div>
-      { sex === 'female' && (  <div className="grid grid-cols-2 gap-2 w-full mt-5 mb-5">
+      { sex === 'female' && (  <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-7 w-full md:w-3/4 mt-5 mb-5">
     <input  required name="Height" placeholder="HEIGHT" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 ml-5"/>
-    <input  required name="Weight" placeholder="WEIGHT" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mr-5"/>
-    <input  required name="Bust" placeholder="BUST" type='text' className="placeholder-black bg-inherit border border-black focus:outline-none p-2 ml-5"/>
+    <input  required name="Weight" placeholder="WEIGHT" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mr-5 md:mr-0"/>
+    <input  required name="Bust" placeholder="BUST" type='text' className="placeholder-black bg-inherit border border-black focus:outline-none p-2 ml-5 md:ml-0"/>
     <input  required name="Waist" placeholder="WAIST" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mr-5"/>
     <input  required name="Hips" placeholder="HIPS" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 ml-5"/>
-    <input  required name="Dress Size" placeholder="DRESS SIZE" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mr-5"/>
-    <input  required name="Eye colour" placeholder="EYE COLOUR" type='text' className="placeholder-black bg-inherit border border-black focus:outline-none p-2 ml-5"/>
+    <input  required name="Dress Size" placeholder="DRESS SIZE" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mr-5 md:mr-0"/>
+    <input  required name="Eye colour" placeholder="EYE COLOUR" type='text' className="placeholder-black bg-inherit border border-black focus:outline-none p-2 ml-5 md:ml-0"/>
     <input  required name="Shoe Size" placeholder="SHOE SIZE" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mr-5"/>
      </div>
 ) }
@@ -51,14 +51,14 @@ const Form = () => {
     </div>
    
    <div>
-    {sex === 'male' && ( <div className="grid grid-cols-2 gap-2 w-full mt-5 mb-5">
+    {sex === 'male' && ( <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-7 w-full md:w-3/4 mt-5 mb-5">
     <input  required name="Height" placeholder="HEIGHT" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 ml-5"/>
-    <input  required name="Weight" placeholder="WEIGHT" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mr-5"/>
-    <input  required name="Chest" placeholder="CHEST" type='text' className="placeholder-black bg-inherit border border-black focus:outline-none p-2 ml-5"/>
+    <input  required name="Weight" placeholder="WEIGHT" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mr-5 md:mr-0"/>
+    <input  required name="Chest" placeholder="CHEST" type='text' className="placeholder-black bg-inherit border border-black focus:outline-none p-2 ml-5 md:ml-0"/>
     <input  required name="Waist" placeholder="WAIST" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mr-5"/>
     <input  required name="Suit Size" placeholder="SUIT SIZE" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 ml-5"/>
-    <input  required name="INSEAM" placeholder="INSEAM" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mr-5"/>
-    <input  required name="Eye colour" placeholder="EYE COLOUR" type='text' className="placeholder-black bg-inherit border border-black focus:outline-none p-2 ml-5"/>
+    <input  required name="INSEAM" placeholder="INSEAM" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mr-5 md:mr-0"/>
+    <input  required name="Eye colour" placeholder="EYE COLOUR" type='text' className="placeholder-black bg-inherit border border-black focus:outline-none p-2 ml-5 md:ml-0"/>
     <input  required name="Shoe Size" placeholder="SHOE SIZE" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mr-5"/>
      </div>)}
 
