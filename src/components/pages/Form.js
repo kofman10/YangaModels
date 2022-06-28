@@ -1,9 +1,10 @@
 import { useForm } from "react-hook-form";
 import Footer from "../Footer";
 import Imgupload from "./Imgupload";
+import { db } from "../../firebase-config";
 
 const Form = () => {
-  const { register, watch, handleSubmit} = useForm();
+  const { register, watch, handleSubmit, formState: { errors }} = useForm();
    
   const sex = watch('sex')
 
@@ -11,14 +12,19 @@ const Form = () => {
      console.log(data)
   }
 
+
+
+
     return (   
       <> 
     <form  onSubmit = {handleSubmit(onSubmit)} className = 'md:w-3/4'>
     <div className="flex flex-col justify-center  mx-5 md:grid md:grid-cols-2 md:gap-5  md:mt-5 md:mb-5"> 
-    <input  required name="firstname" placeholder="FIRSTNAME" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mt-2 md:mt-0"/>
-    <input  required name="lastname" placeholder="LASTNAME" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mt-2 md:mt-0"/>
+    <input required  name="firstname" placeholder="FIRSTNAME" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mt-2 md:mt-0"  />
+
+    <input  required name="lastname" placeholder="LASTNAME" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mt-2 md:mt-0" />
     <input  required name="date of birth" placeholder="DATE OF BIRTH" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mt-2 md:mt-0"/>
-    <input  required name="email" placeholder="EMAIL" type="email" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mt-2 md:mt-0"/>
+    <input  {...register("email", { required: true, pattern:{value: /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/} })} name="email" placeholder="EMAIL" type="email" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mt-2 md:mt-0"/><div>      {errors.email && <span className="text-red-800">please enter a valid email</span>}
+</div>
     <input  required name="Mobile Number" placeholder="MOBILE NUMBER" type='' className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mt-2 md:mt-0"/>
     <input  required name="address" placeholder="ADDRESS" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mt-2 md:mt-0"/>
     <input  required name="city" placeholder="CITY" type='text' className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mt-2 md:mt-0"/>

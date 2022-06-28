@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useEffect } from "react";
+import { useForm } from "react-hook-form";
 
 const InnerUpload = () => {
 
@@ -33,9 +34,9 @@ const InnerUpload = () => {
        }, [image]);
 
     return ( <>  {preview ? (<img onClick={() => {setImage(null)}} className ="border border-dashed object-cover border-black h-[275px] w-3/4 md:w-1/4" src = {preview} alt = 'preview'/>) : ( <label className="border border-dashed border-black h-[275px] w-3/4 md:w-1/4">
-    <div className="">
+    <div>
     <span className="p-3">#Photo *</span>
-    <input  required  className="hidden"  accept="image/*" type="file" name="pic" id="pic" onChange={fileHandler}/>
+    <input required  className="hidden"  accept="image/*" type="file" name="pic" id="pic" onChange={fileHandler}/>
     </div> 
   </label>  )} </>);
 }
