@@ -1,15 +1,24 @@
 import { useForm } from "react-hook-form";
 import Footer from "../Footer";
-import Imgupload from "./Imgupload";
+import InnerUpload1 from "./InnerUpload1"
 import { db } from "../../firebase-config";
+import { useState } from "react"
+
 
 const Form = () => {
-  const { register, watch, handleSubmit, formState: { errors }} = useForm();
+    const [image, setImage] = useState();
+
+ const [message, setMessage] = useState('');
+
+  const { register, watch, handleSubmit, formState: { errors }, reset} = useForm();
    
   const sex = watch('sex')
 
   const onSubmit = (data) => {
-     console.log(data)
+     console.log(data);
+     setMessage('Thank you, your application has been successfully submitted')
+     reset()
+     setImage(null)
   }
 
 
@@ -23,7 +32,7 @@ const Form = () => {
 
     <input  required name="lastname" placeholder="LASTNAME" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mt-2 md:mt-0" />
     <input  required name="date of birth" placeholder="DATE OF BIRTH" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mt-2 md:mt-0"/>
-    <input  {...register("email", { required: true, pattern:{value: /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/} })} name="email" placeholder="EMAIL" type="email" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mt-2 md:mt-0"/><div>      {errors.email && <span className="text-red-800">please enter a valid email</span>}
+    <input  {...register("email", { required: true, pattern:{value: /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/} })} name="email" placeholder="EMAIL" type="email" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mt-2 md:mt-0"/><div className="lg:hidden">{errors.email && <span className="text-red-800">please enter a valid email</span>}
 </div>
     <input  required name="Mobile Number" placeholder="MOBILE NUMBER" type='' className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mt-2 md:mt-0"/>
     <input  required name="address" placeholder="ADDRESS" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mt-2 md:mt-0"/>
@@ -74,11 +83,12 @@ const Form = () => {
     
 
      <span className="ml-5 font-semibold">PHOTO & VIDEO SUBMISSION </span>
-           <Imgupload />
+     <div className="flex flex-col space-y-3 mx-5 mt-2">
+      <InnerUpload1 image = {image} setImage = {setImage} />
+       </div>
    <p className="mx-5 mt-5  tracking-wide">We want to know more about you as a person,a funny story  or something most people
 dont know about you. Get creative and show us who you are.   [sample vide link]</p>
 <input  required name="Instagram" placeholder="UPLOAD VIDEO HERE" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mx-5"/>
- 
  <section className=" mt-5  mx-5">
    <span className="font-semibold">TIPS</span>
    <ul className="flex flex-col gap-2  tracking-wide">
@@ -99,6 +109,7 @@ fashion shoot.</li>
 
  <button type="submit" className="border bg-[#B4917E] uppercase font-bold rounded-md ml-5 py-3 px-5 mt-5"> Submit application</button>
 </form>
+     <div className="ml-4 mt-5 font-semibold text-green-900 font-fraunces">{message}</div>
 <Footer />
 </>
  );

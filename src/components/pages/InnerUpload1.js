@@ -1,10 +1,8 @@
 import { useState } from "react";
 import { useEffect } from "react";
-import { useForm } from "react-hook-form";
 
-const InnerUpload = () => {
 
-    const [image, setImage] = useState();
+const InnerUpload1 = ({image, setImage}) => {
     const [preview, setPreview] = useState();
     
       const fileHandler = (event) => { 
@@ -41,4 +39,5 @@ const InnerUpload = () => {
   </label>  )} </>);
 }
  
-export default InnerUpload;
+export default InnerUpload1;
+

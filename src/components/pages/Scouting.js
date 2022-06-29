@@ -2,6 +2,8 @@ import Header from "../Header";
 import Form from "./Form";
 
 const Scouting = () => {
+
+    
     return (
         <div className="bg-[#F8DBCB] h-full  w-full">
             <Header />
@@ -10,7 +12,7 @@ const Scouting = () => {
 Kindly complete all the sections below and we will get in contact with you if we believe that you have the right characteristics to part of the family. </p>
 
 <p  className="ml-5 mb-5 font-semibold">INFO</p >
-       <Form />
+       <Form liftState/>
         </div>
       );
 }
