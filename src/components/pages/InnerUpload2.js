@@ -2,37 +2,36 @@ import { useState } from "react";
 import { useEffect } from "react";
 
 
-const InnerUpload1 = ({image, setImage}) => {
+const InnerUpload2 = ({imagee, setImagee}) => {
     const [preview, setPreview] = useState();
-    
+     
       const fileHandler = (event) => { 
            const file = event.target.files[0]
     
            if (file && file.type.substr(0,5) === 'image') {
-               setImage(file)
+               setImagee(file)
            }
            else {
-               setImage (null)
+               setImagee (null)
             }
-            
+           
       }
-      
        useEffect(() => {
-         
-        if (image) {
+        
+        if (imagee) {
           const reader = new FileReader()
           reader.onloadend = () => {
            setPreview(reader.result)
           }
-          reader.readAsDataURL(image);
+          reader.readAsDataURL(imagee);
+          
         } 
         else {
              setPreview(null)
         }
-    
-       }, [image]);
+       }, [imagee]);
 
-    return ( <>  {preview ? (<img onClick={() => {setImage(null)}} className ="border border-dashed object-cover border-black h-[275px] w-3/4 md:w-1/4" src = {preview} alt = 'preview'/>) : ( <label className="border border-dashed border-black h-[275px] w-3/4 md:w-1/4">
+    return ( <>  {preview ? (<img onClick={() => {setImagee(null)}} className ="border border-dashed object-cover border-black h-[275px] w-3/4 md:w-1/4" src = {preview} alt = 'preview'/>) : ( <label className="border border-dashed border-black h-[275px] w-3/4 md:w-1/4">
     <div>
     <span className="p-3">#Photo *</span>
     <input required  className="hidden"  accept="image/*" type="file" name="pic" id="pic" onChange={fileHandler}/>
@@ -40,5 +39,5 @@ const InnerUpload1 = ({image, setImage}) => {
   </label>  )} </>);
 }
  
-export default InnerUpload1;
+export default InnerUpload2;
 

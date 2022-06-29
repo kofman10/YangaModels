@@ -1,12 +1,18 @@
 import { useForm } from "react-hook-form";
 import Footer from "../Footer";
 import InnerUpload1 from "./InnerUpload1"
+import InnerUpload2 from "./InnerUpload2"
+import InnerUpload3 from "./InnerUpload3"
+import InnerUpload4 from "./InnerUpload4"
 import { db } from "../../firebase-config";
 import { useState } from "react"
 
 
 const Form = () => {
     const [image, setImage] = useState();
+    const [imagee, setImagee] = useState();
+    const [imageee, setImageee] = useState();
+    const [imageeee, setImageeee] = useState();
 
  const [message, setMessage] = useState('');
 
@@ -17,8 +23,11 @@ const Form = () => {
   const onSubmit = (data) => {
      console.log(data);
      setMessage('Thank you, your application has been successfully submitted')
-     reset()
-     setImage(null)
+     reset();
+     setImage(null);
+     setImagee(null);
+     setImageee(null);
+     setImageeee(null);
   }
 
 
@@ -84,7 +93,12 @@ const Form = () => {
 
      <span className="ml-5 font-semibold">PHOTO & VIDEO SUBMISSION </span>
      <div className="flex flex-col space-y-3 mx-5 mt-2">
+
       <InnerUpload1 image = {image} setImage = {setImage} />
+      <InnerUpload2 imagee = {imagee} setImagee = {setImagee} />
+      <InnerUpload3 imageee = {imageee} setImageee = {setImageee} />
+      <InnerUpload4 imageeee = {imageeee} setImageeee = {setImageeee} />
+
        </div>
    <p className="mx-5 mt-5  tracking-wide">We want to know more about you as a person,a funny story  or something most people
 dont know about you. Get creative and show us who you are.   [sample vide link]</p>
