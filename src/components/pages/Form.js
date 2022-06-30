@@ -21,9 +21,6 @@ const Form = () => {
      setImage(null)
   }
 
-
-
-
     return (   
       <> 
     <form  onSubmit = {handleSubmit(onSubmit)} className = 'md:w-3/4'>
