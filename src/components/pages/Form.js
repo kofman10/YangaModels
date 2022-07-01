@@ -1,12 +1,18 @@
 import { useForm } from "react-hook-form";
 import Footer from "../Footer";
 import InnerUpload1 from "./InnerUpload1"
+import InnerUpload2 from "./InnerUpload2"
+import InnerUpload3 from "./InnerUpload3"
+import InnerUpload4 from "./InnerUpload4"
 import { db } from "../../firebase-config";
 import { useState } from "react"
 
 
 const Form = () => {
     const [image, setImage] = useState();
+    const [imagee, setImagee] = useState();
+    const [imageee, setImageee] = useState();
+    const [imageeee, setImageeee] = useState();
 
  const [message, setMessage] = useState('');
 
@@ -17,25 +23,61 @@ const Form = () => {
   const onSubmit = (data) => {
      console.log(data);
      setMessage('Thank you, your application has been successfully submitted')
-     reset()
-     setImage(null)
+     reset();
+     setImage(null);
+     setImagee(null);
+     setImageee(null);
+     setImageeee(null);
+     
   }
+
+  const [userData, setUserData] = useState({
+    firstName: '',
+    lastName: '',
+    phone: '',
+    email: '',
+    address: '',
+    city: '',
+    dateofbirth: '',
+    instagram: '',
+    talent: '',
+    height: '',
+    weight:'',
+    bust: '',
+    waist: '',
+    hips: '',
+    dressSize: '',
+    eyeColour: '',
+    shoeSize: '',
+    chest: '',
+    suitSize: '',
+    inseam: '',
+
+  });
+
+  let name, value;
+  const postUserData = (event) => {
+    name = event.target.name;
+    value = event.target.value;
+
+    setUserData({...userData, [name]: value});
+  };
 
     return (   
       <> 
     <form  onSubmit = {handleSubmit(onSubmit)} className = 'md:w-3/4'>
     <div className="flex flex-col justify-center  mx-5 md:grid md:grid-cols-2 md:gap-5  md:mt-5 md:mb-5"> 
-    <input required  name="firstname" placeholder="FIRSTNAME" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mt-2 md:mt-0"  />
+    <input required  name="firstName" placeholder="FIRSTNAME" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mt-2 md:mt-0" value = {userData.firstName} onChange = { postUserData}/>
 
-    <input  required name="lastname" placeholder="LASTNAME" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mt-2 md:mt-0" />
-    <input  required name="date of birth" placeholder="DATE OF BIRTH" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mt-2 md:mt-0"/>
-    <input  {...register("email", { required: true, pattern:{value: /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/} })} name="email" placeholder="EMAIL" type="email" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mt-2 md:mt-0"/><div className="lg:hidden">{errors.email && <span className="text-red-800">please enter a valid email</span>}
+    <input  required name="lastName" placeholder="LASTNAME" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mt-2 md:mt-0" value = {userData.lastName} onChange = { postUserData}/>
+    <input  required name="dateofbirth" placeholder="DATE OF BIRTH" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mt-2 md:mt-0" value = {userData.dateofbirth} onChange = { postUserData}/>
+    <input  {...register("email", { required: true, pattern:{value: /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/} })} name="email" placeholder="EMAIL" type="email" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mt-2 md:mt-0" value = {userData.email} onChange = { postUserData}/><div className="lg:hidden">{errors.email && <span className="text-red-800">please enter a valid email</span>}
 </div>
-    <input  required name="Mobile Number" placeholder="MOBILE NUMBER" type='' className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mt-2 md:mt-0"/>
-    <input  required name="address" placeholder="ADDRESS" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mt-2 md:mt-0"/>
-    <input  required name="city" placeholder="CITY" type='text' className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mt-2 md:mt-0"/>
-    <input  required name="Instagram" placeholder="INSTAGRAM" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mt-2 md:mt-0"/>
-    <input  required name="Talent/Hobbies" placeholder="TALENT/HOBBIES" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mt-2 md:mt-0"/>
+    <input  required name="phone" placeholder="MOBILE NUMBER" type='' className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mt-2 md:mt-0" value = {userData.phone} onChange = { postUserData}/>
+    <input  required name="address" placeholder="ADDRESS" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mt-2 md:mt-0" value = {userData.address} onChange = { postUserData}/>
+    <input  required name="city" placeholder="CITY" type='text' className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mt-2 md:mt-0" value ={userData.city} onChange = {postUserData}/>
+    <input  required name="instagram" placeholder="INSTAGRAM" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mt-2 md:mt-0" value = {userData.instagram} onChange = { postUserData}/>
+    <input  required name="talent" placeholder="TALENT/HOBBIES" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mt-2 md:mt-0" value = {userData.talent} onChange = { postUserData}/>
     
          </div>
   <div className="flex items-center ml-5 mt-5 mb-5"> 
@@ -49,14 +91,14 @@ const Form = () => {
     <span className=" ml-5 font-semibold">MEASUREMENT</span>
     <div>
       { sex === 'female' && (  <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-7 w-full md:w-3/4 mt-5 mb-5">
-    <input  required name="Height" placeholder="HEIGHT" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 ml-5"/>
-    <input  required name="Weight" placeholder="WEIGHT" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mr-5 md:mr-0"/>
-    <input  required name="Bust" placeholder="BUST" type='text' className="placeholder-black bg-inherit border border-black focus:outline-none p-2 ml-5 md:ml-0"/>
-    <input  required name="Waist" placeholder="WAIST" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mr-5"/>
-    <input  required name="Hips" placeholder="HIPS" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 ml-5"/>
-    <input  required name="Dress Size" placeholder="DRESS SIZE" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mr-5 md:mr-0"/>
-    <input  required name="Eye colour" placeholder="EYE COLOUR" type='text' className="placeholder-black bg-inherit border border-black focus:outline-none p-2 ml-5 md:ml-0"/>
-    <input  required name="Shoe Size" placeholder="SHOE SIZE" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mr-5"/>
+    <input  required name="height" placeholder="HEIGHT" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 ml-5" value = {userData.height} onChange = { postUserData}/>
+    <input  required name="weight" placeholder="WEIGHT" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mr-5 md:mr-0" value = {userData.weight} onChange = { postUserData}/>
+    <input  required name="bust" placeholder="BUST" type='text' className="placeholder-black bg-inherit border border-black focus:outline-none p-2 ml-5 md:ml-0" value = {userData.bust} onChange = { postUserData}/>
+    <input  required name="waist" placeholder="WAIST" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mr-5" value = {userData.waist} onChange = { postUserData}/>
+    <input  required name="hips" placeholder="HIPS" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 ml-5" value = {userData.hips} onChange = { postUserData}/>
+    <input  required name="dressSize" placeholder="DRESS SIZE" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mr-5 md:mr-0" value = {userData.dressSize} onChange = { postUserData}/>
+    <input  required name="eyeColour" placeholder="EYE COLOUR" type='text' className="placeholder-black bg-inherit border border-black focus:outline-none p-2 ml-5 md:ml-0" value = {userData.eyeColour} onChange = { postUserData}/>
+    <input  required name="shoeSize" placeholder="SHOE SIZE" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mr-5" value = {userData.shoeSize} onChange = { postUserData}/>
      </div>
 ) }
    
@@ -64,14 +106,14 @@ const Form = () => {
    
    <div>
     {sex === 'male' && ( <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-7 w-full md:w-3/4 mt-5 mb-5">
-    <input  required name="Height" placeholder="HEIGHT" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 ml-5"/>
-    <input  required name="Weight" placeholder="WEIGHT" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mr-5 md:mr-0"/>
-    <input  required name="Chest" placeholder="CHEST" type='text' className="placeholder-black bg-inherit border border-black focus:outline-none p-2 ml-5 md:ml-0"/>
-    <input  required name="Waist" placeholder="WAIST" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mr-5"/>
-    <input  required name="Suit Size" placeholder="SUIT SIZE" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 ml-5"/>
-    <input  required name="INSEAM" placeholder="INSEAM" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mr-5 md:mr-0"/>
-    <input  required name="Eye colour" placeholder="EYE COLOUR" type='text' className="placeholder-black bg-inherit border border-black focus:outline-none p-2 ml-5 md:ml-0"/>
-    <input  required name="Shoe Size" placeholder="SHOE SIZE" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mr-5"/>
+    <input  required name="height" placeholder="HEIGHT" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 ml-5" value = {userData.height} onChange = { postUserData}/>
+    <input  required name="weight" placeholder="WEIGHT" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mr-5 md:mr-0" value = {userData.weight} onChange = { postUserData}/>
+    <input  required name="chest" placeholder="CHEST" type='text' className="placeholder-black bg-inherit border border-black focus:outline-none p-2 ml-5 md:ml-0" value = {userData.chest} onChange = { postUserData}/>
+    <input  required name="waist" placeholder="WAIST" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mr-5" value = {userData.waist} onChange = { postUserData}/>
+    <input  required name="suitSize" placeholder="SUIT SIZE" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 ml-5" value = {userData.suitSize} onChange = { postUserData}/>
+    <input  required name="inseam" placeholder="INSEAM" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mr-5 md:mr-0" value = {userData.inseam} onChange = { postUserData}/>
+    <input  required name="eyeColour" placeholder="EYE COLOUR" type='text' className="placeholder-black bg-inherit border border-black focus:outline-none p-2 ml-5 md:ml-0" value = {userData.eyeColour} onChange = { postUserData}/>
+    <input  required name="shoeSize" placeholder="SHOE SIZE" type="text" className="placeholder-black bg-inherit border border-black focus:outline-none p-2 mr-5" value = {userData.shoeSize} onChange = { postUserData}/>
      </div>)}
 
   
@@ -81,7 +123,12 @@ const Form = () => {
 
      <span className="ml-5 font-semibold">PHOTO & VIDEO SUBMISSION </span>
      <div className="flex flex-col space-y-3 mx-5 mt-2">
+
       <InnerUpload1 image = {image} setImage = {setImage} />
+      <InnerUpload2 imagee = {imagee} setImagee = {setImagee} />
+      <InnerUpload3 imageee = {imageee} setImageee = {setImageee} />
+      <InnerUpload4 imageeee = {imageeee} setImageeee = {setImageeee} />
+
        </div>
    <p className="mx-5 mt-5  tracking-wide">We want to know more about you as a person,a funny story  or something most people
 dont know about you. Get creative and show us who you are.   [sample vide link]</p>
