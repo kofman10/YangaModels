@@ -7,6 +7,7 @@ import InnerUpload4 from "./InnerUpload4"
 import { db } from "../../firebase-config";
 import { storage } from "../../firebase-config";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
+import { collection, addDoc, serverTimestamp } from "firebase/firestore"; 
 import { useState } from "react"
 
 const Form = () => {
@@ -21,7 +22,7 @@ const Form = () => {
    
   const sex = watch('sex')
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
        const name =new Date().getTime + image.name;
        const storageRef = ref(storage, image.name);
        const uploadTask = uploadBytesResumable(storageRef, image)
@@ -49,6 +50,10 @@ const Form = () => {
        }
        );
 
+       await addDoc(collection(db, 'applicants'),{
+        ...userData, 
+        timestamp: serverTimestamp()
+       })     
 
      console.log(data);
      setMessage('Thank you, your application has been successfully submitted')
