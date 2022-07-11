@@ -247,7 +247,7 @@ dont know about you. Get creative and show us who you are.   [sample vide link]<
 fashion shoot.</li>
 <li>Be natural, no crazy poses or wild smiles</li>
 <li>On no occasion should you upload selfies or nudes</li>
-<li className="font-bold">click the submit button again when your file upload is 100%</li>
+<li className="font-bold">click the submit button again when your file upload is 100% till you see a message stating the success of your application</li>
 </ul>
  </section>
 
