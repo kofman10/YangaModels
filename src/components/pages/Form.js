@@ -235,19 +235,19 @@ dont know about you. Get creative and show us who you are.   [sample vide link]<
  <section className=" mt-5  mx-5">
    <span className="font-semibold">TIPS</span>
    <ul className="flex flex-col gap-2  tracking-wide list-disc list-outside ml-4">
-<li>  Ensure that all fields are filled correctly</li>
+<li>  Ensure that all fields are filled correctly.</li>
 <li>While taking polaroids:</li>
 <li>Use natural light(outdoor) no studio lighting or flash photography</li>
 <li>Do not wear makeup and hair should be in its natural state, tied up or pulled back into 
- a pony tail</li>
-<li>The background should be a plain wall without any distractions(preferably white)</li>
-<li>Be yourself; do not be afraid to incorporate your personality or personal style</li>
-<li>Do not retouch or edit the images in anyway, blemishes are natural</li>
+ a pony tail.</li>
+<li>The background should be a plain wall without any distractions(preferably white).</li>
+<li>Be yourself; do not be afraid to incorporate your personality or personal style.</li>
+<li>Do not retouch or edit the images in anyway, blemishes are natural.</li>
 <li>Avoid flashy clothings and earrings, it should be more like a passport photograph than a
 fashion shoot.</li>
-<li>Be natural, no crazy poses or wild smiles</li>
-<li>On no occasion should you upload selfies or nudes</li>
-<li className="font-bold">click the submit button again when your file upload is 100% till you see a message stating the success of your application</li>
+<li>Be natural, no crazy poses or wild smiles.</li>
+<li>On no occasion should you upload selfies or nudes.</li>
+<li className="font-bold">click the submit button again when your file upload is 100% till you see a message stating the success of your application.</li>
 </ul>
  </section>
 
