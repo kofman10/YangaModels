@@ -242,8 +242,8 @@ dont know about you. Get creative and show us who you are.   [sample vide link]<
  a pony tail</li>
 <li>The background should be a plain wall without any distractions(preferably white)</li>
 <li>Be yourself; do not be afraid to incorporate your personality or personal style</li>
-<li>Do not retouch or edit the images i anyway, blemishes are natural</li>
-<li>Avoid flash clothing and earrings, it should be more like a passport photograph than a
+<li>Do not retouch or edit the images in anyway, blemishes are natural</li>
+<li>Avoid flashy clothings and earrings, it should be more like a passport photograph than a
 fashion shoot.</li>
 <li>Be natural, no crazy poses or wild smiles</li>
 <li>On no occasion should you upload selfies or nudes</li>
